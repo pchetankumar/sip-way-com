@@ -1,24 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { CartProvider } from "@/components/sipwhey/cart";
+import { CartDrawer } from "@/components/sipwhey/cart-drawer";
+import { Header } from "@/components/sipwhey/header";
+import {
+  Hero,
+  Formula,
+  Flavors,
+  HowItWorks,
+  Reviews,
+  Faq,
+  Footer,
+} from "@/components/sipwhey/sections";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "SipWhey — Clear Whey + Marine Collagen 7-Day Sachet Box";
+const description =
+  "24.5g total protein per sachet: 20g clear whey isolate + 5g marine collagen + 80mg Vitamin C. Zero sugar, zero artificial colors. 7-day boxes from ₹1,599.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <CartProvider>
+      <Header />
+      <main>
+        <Hero />
+        <Formula />
+        <Flavors />
+        <HowItWorks />
+        <Reviews />
+        <Faq />
+      </main>
+      <Footer />
+      <CartDrawer />
+    </CartProvider>
   );
 }
