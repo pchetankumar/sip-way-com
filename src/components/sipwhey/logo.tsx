@@ -1,8 +1,10 @@
+import logoImage from "@/assets/Logo_Sipwhey.jpeg";
+
 export function Monogram({ className = "" }: { className?: string }) {
   return (
     <span className={`relative inline-flex shrink-0 items-center ${className}`}>
       <img
-        src="/logo.jpg"
+        src={logoImage}
         alt="SipWhey Logo"
         className="h-10 w-auto object-contain"
       />

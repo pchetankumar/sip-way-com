@@ -1,3 +1,7 @@
+import pineappleBox from "@/assets/Pineapple Box.jpeg";
+import blueberryBox from "@/assets/BluBerry.jpeg";
+import comboBox from "@/assets/combo Box.jpeg";
+
 export type Product = {
   id: string;
   name: string;
@@ -18,7 +22,7 @@ export const products: Product[] = [
     sachets: 7,
     price: 1599,
     mrp: 1999,
-    image: "/pineapple-box.jpg",
+    image: pineappleBox,
     pill: "pineapple",
   },
   {
@@ -28,7 +32,7 @@ export const products: Product[] = [
     sachets: 7,
     price: 1599,
     mrp: 1999,
-    image: "/blueberry-box.jpg",
+    image: blueberryBox,
     pill: "blueberry",
   },
   {
@@ -38,7 +42,7 @@ export const products: Product[] = [
     sachets: 14,
     price: 3200,
     mrp: 3998,
-    image: "/combo-box.jpg",
+    image: comboBox,
     badge: "Best Value / 14-Day Supply",
     pill: "duo",
   },
