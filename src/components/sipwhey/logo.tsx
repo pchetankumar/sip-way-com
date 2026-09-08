@@ -1,27 +1,11 @@
 export function Monogram({ className = "" }: { className?: string }) {
   return (
-    <span
-      className={`relative inline-grid size-10 shrink-0 place-items-center rounded-full border border-gold/60 ${className}`}
-      aria-hidden="true"
-    >
-      <svg viewBox="0 0 32 32" className="size-5">
-        <path
-          d="M4 8 L14 8 L8 16 L18 16 L6 26"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3.4"
-          strokeLinecap="square"
-          className="text-obsidian"
-        />
-        <path
-          d="M17 9 L22 22 L28 6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3.4"
-          strokeLinecap="square"
-          className="text-gold"
-        />
-      </svg>
+    <span className={`relative inline-flex shrink-0 items-center ${className}`}>
+      <img
+        src="/logo.jpg"
+        alt="SipWhey Logo"
+        className="h-10 w-auto object-contain"
+      />
     </span>
   );
 }
