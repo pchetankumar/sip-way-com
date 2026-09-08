@@ -1,7 +1,3 @@
-import pineapple from "@/assets/box-pineapple.jpg.asset.json";
-import blueberry from "@/assets/box-blueberry.jpg.asset.json";
-import duo from "@/assets/box-duo.jpg.asset.json";
-
 export type Product = {
   id: string;
   name: string;
@@ -22,7 +18,7 @@ export const products: Product[] = [
     sachets: 7,
     price: 1599,
     mrp: 1999,
-    image: pineapple.url,
+    image: "/pineapple-box.jpg",
     pill: "pineapple",
   },
   {
@@ -32,7 +28,7 @@ export const products: Product[] = [
     sachets: 7,
     price: 1599,
     mrp: 1999,
-    image: blueberry.url,
+    image: "/blueberry-box.jpg",
     pill: "blueberry",
   },
   {
@@ -42,7 +38,7 @@ export const products: Product[] = [
     sachets: 14,
     price: 3200,
     mrp: 3998,
-    image: duo.url,
+    image: "/combo-box.jpg",
     badge: "Best Value / 14-Day Supply",
     pill: "duo",
   },
